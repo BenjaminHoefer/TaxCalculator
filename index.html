@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrwertsteuer-Rechner</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="body body__tax-calc">
+    <div class="tax-calc">
+        <h1 class="headline">Mehrwertsteuer-Rechner</h1>
+        <form  class="tax-calc__form" action="#" onsubmit="return false">
+            <fieldset class="tax-calc__fieldset">
+                <h2 class="headline">Was soll berechnet werden?</h2>
+                <label class="text" for="gross">
+                    <input class="radio-btn" id="gross" type="radio" value="gross" name="tax-type" checked>
+                    Mehrwertsteuer aufschlagen (Netto zu Brutto)
+                </label><br>
+                <label class="text" for="net">
+                    <input class="radio-btn" id="net" type="radio" value="net" name="tax-type">
+                    Mehrwertsteuer abziehen (Brutto zu Netto)
+                </label>
+            </fieldset>
+            <fieldset class="tax-calc__fieldset">
+                <h2 class="headline">Mehrwertsteuersatz</h2>
+                <label class="text" for="high-tax">
+                    <input class="nineteen-tax-rate" type="radio" name="tax-rate" id="high-tax" value="high-rate" checked>19 %
+                </label>
+                <label class="text" for="low-tax">
+                    <input class="seven-tax-rate" type="radio" name="tax-rate" id="low-tax" value="low-tax">7 %
+                </label>
+                </fieldset>
+                <fieldset class="tax-calc__fieldset">
+                    <label class="text" for="amount">
+                        Nettobetrag (Preis ohne Mehrwertsteuer) in Euro*<br>
+                        <input class="amount" type="text" id="amount" required>
+                    </label>
+                </fieldset>
+                <button class="tax-calc__btn btn" onclick="calculator()">Berechnen</button>
+                <h3 class="headline headline--small">Ergebnis</h3>
+                <fieldset class="tax-calc__fieldset">
+                    <h2 class="headline">Mehrwertsteuerbetrag</h2>
+                    <p class="text text--solution tax-amount"></p>
+                </fieldset>
+                <fieldset class="tax-calc__fieldset">
+                    <h2 class="headline">Bruttobetrag (Endpreis)</h2>
+                    <p class="text text--solution end-amount"></p>
+                </fieldset>
+        </form>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

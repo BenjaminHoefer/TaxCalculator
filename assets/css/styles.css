@@ -1,0 +1,78 @@
+/* Import of font families */
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto-Regular.woff2);
+}
+
+/* General */
+
+.headline {
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.headline--small {
+    font-size: 1rem;
+    margin-inline-start: 1rem;
+}
+
+.text {
+    font-family: "Roboto-Regular";
+    font-size: .9rem;
+}
+
+.text--solution {
+    font-size: 1rem;
+}
+
+/* Tax Calculator */
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.body__tax-calc {
+    margin-top: 10rem;
+    height: auto;
+}
+
+.tax-calc {
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    color: ;
+}
+
+.tax-calc__form {
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+.tax-calc__fieldset {
+    background-color: beige;
+    margin-bottom: .2rem;
+    border: none;
+    border-radius: .5rem;
+    margin-inline: 0;
+}
+
+.tax-calc__fieldset:nth-of-type(3) {
+    margin-bottom: 1rem;
+}
+
+.tax-calc__fieldset:nth-of-type(5) {
+    margin-bottom: 0;
+}
+
+.btn {
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: .25rem;
+    padding: .5rem 5rem;
+    margin: 0 auto;
+    display: block;
+}
