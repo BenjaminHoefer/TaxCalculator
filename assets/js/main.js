@@ -23,16 +23,16 @@ function calculator() {
                 /* Calculation of gross tax */
                 if (taxTypeArr[i].value == "gross") {
                     let taxAmount = amount * taxRate;
-                    document.getElementsByClassName("tax-amount")[0].innerHTML = taxAmount.toFixed(2) + " €";
+                    document.getElementsByClassName("tax-amount")[0].innerHTML = taxAmount.toFixed(2).concat(" €");
                     let grossAmount = taxAmount + amount;
-                    document.getElementsByClassName("end-amount")[0].innerHTML = grossAmount.toFixed(2) + " €";
+                    document.getElementsByClassName("end-amount")[0].innerHTML = grossAmount.toFixed(2).concat(" €");
                     return;
                     /* Calculation of net tax */
                 } else {
                     let netAmount = amount / (taxRate + 1);
-                    document.getElementsByClassName("tax-amount")[0].innerHTML = netAmount.toFixed(2) + " €";
+                    document.getElementsByClassName("tax-amount")[0].innerHTML = netAmount.toFixed(2).concat(" €");
                     let taxAmount = amount - netAmount;
-                    document.getElementsByClassName("end-amount")[0].innerHTML = taxAmount.toFixed(2) + " €";
+                    document.getElementsByClassName("end-amount")[0].innerHTML = taxAmount.toFixed(2).concat(" €");
                     return;
                 }
             }
